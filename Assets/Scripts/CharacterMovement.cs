@@ -17,10 +17,24 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         moveDirection = Input.GetAxis("Horizontal");
+        if (moveDirection > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if (moveDirection < 0 && facingRight)
+        {
+            Flip();
+        }
     }
 
     void FixedUpdate()
     {
         rigidbody.velocity = new Vector2(moveDirection * maxSpeed, rigidbody.velocity.y);
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(Vector3.up, 180.0f, Space.World);
     }
 }
