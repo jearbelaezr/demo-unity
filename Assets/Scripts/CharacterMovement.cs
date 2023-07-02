@@ -6,17 +6,24 @@ public class CharacterMovement : MonoBehaviour
     public float moveDirection;
     public bool facingRight = true;
     private new Rigidbody rigidbody;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         moveDirection = Input.GetAxis("Horizontal");
+    }
+
+    void FixedUpdate()
+    {
+        rigidbody.velocity = new Vector2(moveDirection * maxSpeed, rigidbody.velocity.y);
         if (moveDirection > 0 && !facingRight)
         {
             Flip();
@@ -25,11 +32,7 @@ public class CharacterMovement : MonoBehaviour
         {
             Flip();
         }
-    }
-
-    void FixedUpdate()
-    {
-        rigidbody.velocity = new Vector2(moveDirection * maxSpeed, rigidbody.velocity.y);
+        anim.SetFloat("Blend", Mathf.Abs(moveDirection));
     }
 
     void Flip()
