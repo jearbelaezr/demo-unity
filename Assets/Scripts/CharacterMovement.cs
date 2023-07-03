@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
     public bool facingRight = true;
     private new Rigidbody rigidbody;
     private Animator anim;
+    public float jumpSpeed = 600.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,10 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         moveDirection = Input.GetAxis("Horizontal");
+        if (Input.GetButtonDown("Jump"))
+        {
+            rigidbody.AddForce(new Vector2(0, jumpSpeed));
+        }
     }
 
     void FixedUpdate()

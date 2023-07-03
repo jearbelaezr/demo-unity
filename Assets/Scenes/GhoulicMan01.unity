@@ -229,6 +229,7 @@ MonoBehaviour:
   maxSpeed: 6
   moveDirection: 0
   facingRight: 1
+  jumpSpeed: 600
 --- !u!1 &737619745
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xMargin: 3
   yMargin: 3
-  xSmooth: 1
+  xSmooth: 1.5
   ySmooth: 1
   maxXandY: {x: 10, y: 10}
   minXandY: {x: -10, y: -1}
