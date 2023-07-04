@@ -64,6 +64,11 @@ public class CharacterMovement : MonoBehaviour
 
     void Attack()
     {
+        anim.SetTrigger("Attacking");
+    }
+
+    public void CallFireProjectile()
+    {
         clone = Instantiate(knifePrefab, knifeSpawn.position, knifeSpawn.rotation);
         clone.AddForce(knifeSpawn.transform.right * knifeSpeed);
     }

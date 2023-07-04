@@ -1053,6 +1053,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 66a937e79070a9a44a551fda3b57bd28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2103460163}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 66a937e79070a9a44a551fda3b57bd28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2103460164}
   m_SourcePrefab: {fileID: 100100000, guid: 66a937e79070a9a44a551fda3b57bd28, type: 3}
 --- !u!4 &2103460162 stripped
 Transform:
@@ -1080,6 +1083,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2103460164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273332783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c475e49b06eb34a4a9a5469a2d9c20d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 6
+  moveDirection: 0
+  facingRight: 1
+  jumpSpeed: 800
+  grounded: 0
+  groundCheck: {fileID: 0}
+  groundRadious: 0.2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 512
+  knifeSpeed: 600
+  knifeSpawn: {fileID: 0}
+  knifePrefab: {fileID: 4739530468417232122, guid: 5e678af045528cc4794474f35b54156e, type: 3}
 --- !u!1001 &7037811393499810276
 PrefabInstance:
   m_ObjectHideFlags: 0
