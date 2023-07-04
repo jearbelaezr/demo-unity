@@ -361,7 +361,7 @@ MonoBehaviour:
   maxSpeed: 6
   moveDirection: 0
   facingRight: 1
-  jumpSpeed: 600
+  jumpSpeed: 800
   grounded: 0
   groundCheck: {fileID: 0}
   groundRadious: 0.2

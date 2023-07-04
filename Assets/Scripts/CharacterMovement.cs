@@ -7,7 +7,7 @@ public class CharacterMovement : MonoBehaviour
     public bool facingRight = true;
     private new Rigidbody rigidbody;
     private Animator anim;
-    public float jumpSpeed = 600.0f;
+    public float jumpSpeed = 800.0f;
     public bool grounded = false;
     public Transform groundCheck;
     public float groundRadious = 0.2f;
@@ -27,6 +27,7 @@ public class CharacterMovement : MonoBehaviour
         moveDirection = Input.GetAxis("Horizontal");
         if (grounded && Input.GetButtonDown("Jump"))
         {
+            anim.SetTrigger("IsJumping");
             rigidbody.AddForce(new Vector2(0, jumpSpeed));
         }
     }
