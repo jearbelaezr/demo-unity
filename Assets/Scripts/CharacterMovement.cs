@@ -64,7 +64,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Attack()
     {
-        clone = Instantiate<Rigidbody>(knifePrefab, knifeSpawn.position, knifeSpawn.rotation);
+        clone = Instantiate(knifePrefab, knifeSpawn.position, knifeSpawn.rotation);
         clone.AddForce(knifeSpawn.transform.right * knifeSpeed);
     }
 }
